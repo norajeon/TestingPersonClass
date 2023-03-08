@@ -83,6 +83,33 @@ public class TestPerson {
     }
 
     @Test
+    public void testSetHeight() {
+        // Given
+        Person person = new Person();
+        Integer expected = 5;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testNumLimbs() {
+        // Given
+        Person person = new Person();
+        Integer expected = 4;
+
+        // When
+        person.setNumberOfLimbs(expected);
+
+        // Then
+        Integer actual = person.getLimbs();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
     public void testSetAge() {
         // Given
         Person person = new Person();
@@ -93,6 +120,48 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetGrade() {
+        // Given
+        Person person = new Person();
+        Integer expected = 10;
+
+        // When
+        person.setGrade(expected);
+
+        // Then
+        Integer actual = person.getGrade();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHobby() {
+        // Given
+        Person person = new Person();
+        String expected = "reading";
+
+        // When
+        person.setHobby(expected);
+
+        // Then
+        String actual = person.getHobby();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavFood() {
+        // Given
+        Person person = new Person();
+        String expected = "ice cream";
+
+        // When
+        person.setFavFood(expected);
+
+        // Then
+        String actual = person.getFavFood();
         Assert.assertEquals(expected, actual);
     }
 }
